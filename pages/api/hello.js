@@ -1,5 +1,10 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+/**
+* @param {import('next').NextApiRequest} req
+* @param {import('next').NextApiResponse} res
+*/
+export default async function handler(req, res) {
+    res.status(200).json({
+        message: 'Welcome to my API'
+    })
 }
+  
