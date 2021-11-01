@@ -1,4 +1,4 @@
-import getUserInfo from "@/lib/discord/getUserInfo";
+import getUserInfo from '@/lib/discord/getUserInfo'
 
 /**
 * @param {import('next').NextApiRequest} req

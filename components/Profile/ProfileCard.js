@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import DiscordCard from './DiscordCard'
 
-export default function ProfileCard({ user }) {
+export default async function ProfileCard({ user }) {
     return(
         <Center py={6}>
             <Box maxW={'270px'}
@@ -41,7 +41,7 @@ export default function ProfileCard({ user }) {
                     <Stack direction={'row'} justify={'center'} spacing={6}>
                         <Stack spacing={0} align={'center'}>
                             <Text fontWeight={600}>Connections</Text>
-                            <DiscordCard username={user.name} discriminator={1211} />
+                            <DiscordCard username={user.name} discriminator={8936} />
                         </Stack>
                     </Stack>
                 </Box>

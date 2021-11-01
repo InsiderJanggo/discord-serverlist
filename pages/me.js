@@ -3,8 +3,9 @@ import { useSession } from 'next-auth/client'
 import AccessDenied from '@/components/AccessDenied'
 import Layout from '@/components/Layout'
 import ProfileCard from '@/components/Profile/ProfileCard'
+import { useUser } from '@/lib/hooks/useUser'
 
-export default function MePage({ user }) {
+export default function MePage() {
 
     const [session] = useSession()
 
