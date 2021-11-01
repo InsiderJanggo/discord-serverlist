@@ -11,6 +11,7 @@
     "studio": "prisma studio"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.16",
     "@chakra-ui/react": "^1.6.10",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
@@ -20,7 +21,8 @@
     "next": "12.0.2",
     "next-auth": "^3.29.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "eslint": "7.32.0",
