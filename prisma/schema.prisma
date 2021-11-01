@@ -12,7 +12,7 @@ model Account {
   userId String
   providerType String
   providerId String
-  providerAccountID String
+  providerAccountId String 
   refreshToken String?
   accessToken String?
   accessTokenExpires DateTime?
@@ -20,7 +20,7 @@ model Account {
   updatedAt DateTime @updatedAt
   user User @relation(fields: [userId], references: [id])
 
-  @@unique([providerId, providerAccountID])
+  @@unique([providerId, providerAccountId])
 }
 
 model Session {
@@ -48,7 +48,7 @@ model Server {
 model User {
   id String @id @default(cuid())
   name String?
-  email String?
+  email String? @unique
   emailVerified DateTime?
   image String?
   createdAt DateTime @default(now())

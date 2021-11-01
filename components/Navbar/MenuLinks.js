@@ -1,4 +1,13 @@
-import { Box, Stack, Button } from '@chakra-ui/react'
+import { 
+    Box, 
+    Stack, 
+    Button,
+    Avatar,
+    MenuList,
+    Menu,
+    MenuButton,
+    Flex
+ } from '@chakra-ui/react'
 import Item from './Item'
 
 export default function MenuLinks({ isOpen, session }) {
@@ -12,9 +21,22 @@ export default function MenuLinks({ isOpen, session }) {
                 pt={[4, 4, 0, 0]}>
                     <Item to="/">Home</Item>
                     {session ? (
-                        <Item to="/me" isLast>
-                            {session.user.name}
-                        </Item>
+                        <Flex alignItems="center">
+                            <Menu>
+                                <MenuButton as={Button}
+                                    rounded={'full'}
+                                    variant={'link'}
+                                    cursor={'pointer'}
+                                    minW={0}>
+                                    <Avatar size={`sm`} src={session.user.image} />
+                                </MenuButton>
+                                <MenuList>
+                                    <Item to="/me">
+                                        Profile
+                                    </Item>
+                                </MenuList>
+                            </Menu>
+                        </Flex>
                     ): (
                         <Item to="/api/auth/signin" isLast>
                             <Button
