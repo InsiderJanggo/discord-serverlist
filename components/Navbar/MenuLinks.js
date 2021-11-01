@@ -6,11 +6,15 @@ import {
     MenuList,
     Menu,
     MenuButton,
-    Flex
+    Flex,
+    MenuItem
  } from '@chakra-ui/react'
 import Item from './Item'
+import { useRouter } from 'next/router'
 
 export default function MenuLinks({ isOpen, session }) {
+    const router = useRouter()
+
     return(
         <Box  display={{ base: isOpen ? "block" : "none", md: "block" }}
         flexBasis={{ base: "100%", md: "auto" }}>
@@ -31,9 +35,9 @@ export default function MenuLinks({ isOpen, session }) {
                                     <Avatar size={`sm`} src={session.user.image} />
                                 </MenuButton>
                                 <MenuList>
-                                    <Item to="/me">
+                                    <MenuItem onClick={() => router.push('/me')}>
                                         Profile
-                                    </Item>
+                                    </MenuItem>
                                 </MenuList>
                             </Menu>
                         </Flex>
