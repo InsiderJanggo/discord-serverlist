@@ -4,7 +4,7 @@ import AccessDenied from '@/components/AccessDenied'
 import Layout from '@/components/Layout'
 import ProfileCard from '@/components/Profile/ProfileCard'
 
-export default function MePage() {
+export default function MePage({ user }) {
 
     const [session] = useSession()
 
